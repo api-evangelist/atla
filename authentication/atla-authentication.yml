@@ -1,0 +1,13 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/atla-insights-openapi.yaml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: API key authentication using Bearer token
+  sources:
+  - openapi/atla-insights-openapi.yaml
