@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/atla-insights-openapi.yaml
+authentication:
+  style: http-bearer
+  header: Authorization
+  scheme: Bearer
+  ref: authentication/atla-authentication.yml
+idempotency:
+  supported: false
+  note: The Insights Data API surface is read-only (GET), so no idempotency contract applies.
+pagination:
+  style: page-number
+  params:
+    page: { in: query, default: 1, minimum: 1 }
+    pageSize: { in: query, default: 50, minimum: 1, maximum: 1000 }
+  response_fields:
+    - traces
+filtering:
+  time_window: [startTimestamp, endTimestamp]
+  metadata_filter: >-
+    metadataFilter query param — URL-encoded JSON array of {key,value} pairs.
+versioning:
+  style: uri-path
+  current: v1
+error_envelope:
+  media_type: application/json
+  statuses: [401, 404, 500]
+  ref: errors/atla-problem-types.yml
+rate_limit_signaling:
+  documented: false

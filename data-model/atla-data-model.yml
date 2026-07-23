@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/atla-insights-openapi.yaml
+entities:
+  - name: Trace
+    id_field: id
+    key_fields: [environment, isSuccess, isCompleted, metadata, stepCount, startedAt, endedAt, durationSeconds, ingestedAt]
+    domain: AI agent observability
+  - name: Span
+    id_field: id
+    key_fields: [traceId, parentSpanId, spanName, startTimestamp, endTimestamp, isException, otelEvents]
+    domain: OpenTelemetry span within a trace
+relationships:
+  - from: Trace
+    to: Span
+    kind: has_many
+    via: spans
+  - from: Span
+    to: Trace
+    kind: belongs_to
+    via: traceId
+  - from: Span
+    to: Span
+    kind: belongs_to
+    via: parentSpanId

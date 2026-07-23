@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/* on Atla hosts
+hosts:
+  - host: https://app.atla-ai.com
+    note: TLS certificate expired at probe time; probes returned no result
+    documents:
+      - path: /.well-known/security.txt
+        status: 000
+      - path: /.well-known/openid-configuration
+        status: 000
+      - path: /.well-known/oauth-authorization-server
+        status: 000
+      - path: /.well-known/api-catalog
+        status: 000
+      - path: /.well-known/ai-plugin.json
+        status: 000
+  - host: https://docs.atla-ai.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://www.atla-ai.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404

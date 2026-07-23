@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/atla-ai
+packages:
+  - language: python
+    registry: pypi
+    name: atla-insights
+    url: https://pypi.org/project/atla-insights/
+    install: pip install atla-insights
+    version: 0.0.41
+    official: true
+    description: Python SDK for Atla Insights — instrument and monitor AI agents (OpenTelemetry-based).
+    repo: https://github.com/atla-ai/atla-insights-sdk
+  - language: javascript
+    registry: npm
+    name: "@atla-ai/insights-sdk-js"
+    url: https://www.npmjs.com/package/@atla-ai/insights-sdk-js
+    install: npm install @atla-ai/insights-sdk-js
+    version: 0.0.10
+    official: true
+    description: JavaScript/TypeScript SDK for the Atla Insights platform.
+    repo: https://github.com/atla-ai/atla-insights-sdk-js
+  - language: python
+    registry: pypi
+    name: atla
+    url: https://pypi.org/project/atla/
+    install: pip install atla
+    version: 0.6.2
+    official: true
+    archived: true
+    description: The official Python library for the Atla API (Selene evaluation API). Repo archived 2025-07-21.
+    repo: https://github.com/atla-ai/atla-sdk-python

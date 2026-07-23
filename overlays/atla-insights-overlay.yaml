@@ -1,0 +1,16 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Atla Insights API
+  version: 1.0.0
+extends: openapi/atla-insights-openapi.yaml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: atla
+      x-apievangelist-api: atla-insights
+      x-apievangelist-auth: http-bearer
+      x-apievangelist-pagination: page-number
+      x-apievangelist-lifecycle: platform sunset 2026-02-16
+  - target: $.paths['/api/sdk/v1/traces'].get
+    update:
+      x-apievangelist-note: Read-only listing; page/pageSize pagination, time-window and metadata filtering.

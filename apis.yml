@@ -1,8 +1,29 @@
 aid: atla
-name: atla
-description: 'atla is a company surfaced as a portfolio company of creandum and added to the API Evangelist
-  network as a stub for enrichment. Sector: saas. This profile is a lead awaiting the enrichment pipeline.'
+name: Atla
+description: >-
+  Atla builds frontier AI evaluation models (Selene) and Atla Insights, an
+  observability platform for monitoring and improving AI agents. Its Insights
+  Data API exposes OpenTelemetry-based traces and spans of instrumented agent
+  runs — list with time-window and metadata filters, fetch multiple by ID, and
+  retrieve a single trace with full spans, summaries, and custom metrics. Atla
+  ships official Python and JavaScript SDKs and an MCP server. The company is
+  UK-based and backed by Creandum. Note: the Atla Insights platform is scheduled
+  to sunset on 16 February 2026, and the separate Selene evaluation API SDK and
+  MCP server were archived in 2025.
 url: https://raw.githubusercontent.com/api-evangelist/atla/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/atla-ai
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,16 +32,75 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-- Saas
-apis: []
+- SaaS
+- Artificial Intelligence
+- LLM Evaluation
+- AI Agents
+- Observability
+- Monitoring
+- OpenTelemetry
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: atla:atla-sdk-api
+  name: Atla SDK API
+  description: The SDK API from Atla — 3 operation(s) for sdk.
+  humanURL: https://docs.atla-ai.com/api-reference/overview
+  baseURL: https://app.atla-ai.com
+  tags:
+  - SDK
+  properties:
+  - type: OpenAPI
+    url: openapi/atla-sdk-api-openapi.yml
 common:
+- type: DeveloperPortal
+  url: https://docs.atla-ai.com/
+- type: Documentation
+  url: https://docs.atla-ai.com/
+- type: APIReference
+  url: https://docs.atla-ai.com/api-reference/overview
+- type: GettingStarted
+  url: https://docs.atla-ai.com/quickstart
+- type: Support
+  url: https://docs.atla-ai.com/troubleshooting-faq
+- type: GitHubOrganization
+  url: https://github.com/atla-ai
 - type: Website
   url: https://www.atla-ai.com/
+- type: Authentication
+  url: authentication/atla-authentication.yml
+- type: DomainSecurity
+  url: security/atla-domain-security.yml
+- type: Packages
+  url: packages/atla-packages.yml
+- type: SDKs
+  url: packages/atla-packages.yml
+- type: MCPServer
+  url: mcp/atla-mcp.yml
+- type: LLMsTxt
+  url: llms/atla-llms.txt
+- type: WellKnown
+  url: well-known/atla-well-known.yml
+- type: Conformance
+  url: conformance/atla-conformance.yml
+- type: ErrorCatalog
+  url: errors/atla-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/atla-lifecycle.yml
+- type: Conventions
+  url: conventions/atla-conventions.yml
+- type: DataModel
+  url: data-model/atla-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,39 @@
+# Atla
+
+## Docs
+
+- [AI-Assisted Integration](https://docs.atla-ai.com/ai-integration.md): This guide helps AI coding assistants like Claude Code / Cursor agent automatically integrate the Atla Insights SDK into your Python codebase.
+- [Data Model](https://docs.atla-ai.com/api-reference/data-model.md): The core data model for developers consuming AI observability data through Atla's SDK and APIs.
+- [Get Trace](https://docs.atla-ai.com/api-reference/get-trace.md): Get a single trace by ID
+- [Get Traces](https://docs.atla-ai.com/api-reference/get-traces.md): Get traces
+- [Get Multiple Traces by IDs](https://docs.atla-ai.com/api-reference/get-traces-by-ids.md): Get multiple traces by IDs
+- [OpenTelemetry GenAI Events](https://docs.atla-ai.com/api-reference/otel-events.md): How to interpret and work with the GenAI event data available through Atla Insights.
+- [Overview](https://docs.atla-ai.com/api-reference/overview.md): Overview of the Atla Insights Data API
+- [Platform Comparison](https://docs.atla-ai.com/comparison.md): Compare Atla, Langfuse, and LangSmith for AI agent monitoring and evaluation
+- [Coding agents](https://docs.atla-ai.com/integrations/coding-agents.md): Integration for coding agents to use Atla's insights to auto-improve your AI application
+- [Python Integrations](https://docs.atla-ai.com/integrations/python.md): Supported frameworks and LLM providers for Atla Insights in Python
+- [TypeScript Integrations](https://docs.atla-ai.com/integrations/typescript.md): Supported frameworks and LLM providers for Atla Insights in TypeScript
+- [Overview](https://docs.atla-ai.com/overview.md): Learn about Atla
+- [Quickstart](https://docs.atla-ai.com/quickstart.md): Instrument your AI agent with just a few lines of code
+- [Privacy policy](https://docs.atla-ai.com/security/privacy-policy.md)
+- [Terms of service](https://docs.atla-ai.com/security/terms-of-service.md)
+- [Data privacy](https://docs.atla-ai.com/security/trust.md): Learn about our commitment to protecting your data
+- [Advanced Instrumentation](https://docs.atla-ai.com/tracing/advanced-instrumentation.md): Advanced instrumentation for your AI agent workflows
+- [Custom Metrics](https://docs.atla-ai.com/tracing/custom-metrics.md): Add custom evaluation metrics to your traces for domain-specific monitoring and analysis
+- [Experiments](https://docs.atla-ai.com/tracing/experiments.md): Track experiments to try out new features and resolve existing issues
+- [Metadata](https://docs.atla-ai.com/tracing/metadata.md): Track system configurations with trace metadata
+- [Multimodal](https://docs.atla-ai.com/tracing/multimodal.md): Tracing and insights for multimodal AI applications with voice and image support
+- [Sampling](https://docs.atla-ai.com/tracing/sampling.md): Control trace volume in high-throughput scenarios with smart sampling strategies
+- [Tool Invocations](https://docs.atla-ai.com/tracing/tool-invocations.md): Properly log function-based tool calls in your AI agent traces
+- [Troubleshooting & FAQ](https://docs.atla-ai.com/troubleshooting-faq.md): Frequently asked questions and common troubleshooting topics for Atla Insights
+
+## OpenAPI Specs
+
+- [openapi](https://docs.atla-ai.com/api-reference/openapi.yaml)
+- [settings](https://docs.atla-ai.com/.vscode/settings.json)
+
+## Optional
+
+- [Python SDK](https://github.com/atla-ai/atla-insights-sdk)
+- [JS/TS SDK](https://github.com/atla-ai/atla-insights-sdk-js)
+- [Contact Us](https://calendly.com/d/csym-9kk-bbk/insights-ui-onboarding)

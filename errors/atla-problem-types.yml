@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/atla-insights-openapi.yaml
+format: http-status
+envelope: application/json
+problems:
+  - status: 401
+    title: Unauthorized
+    remediation: Provide a valid Bearer API token in the Authorization header.
+    source_operations:
+      - openapi/atla-insights-openapi.yaml#listTraces
+      - openapi/atla-insights-openapi.yaml#getTracesByIds
+      - openapi/atla-insights-openapi.yaml#getTraceById
+  - status: 404
+    title: Trace not found
+    remediation: Verify the traceId exists for the authenticated organization.
+    source_operations:
+      - openapi/atla-insights-openapi.yaml#getTraceById
+  - status: 500
+    title: Internal server error
+    remediation: Retry; if persistent, contact Atla support.
+    source_operations:
+      - openapi/atla-insights-openapi.yaml#listTraces
+      - openapi/atla-insights-openapi.yaml#getTracesByIds
+      - openapi/atla-insights-openapi.yaml#getTraceById

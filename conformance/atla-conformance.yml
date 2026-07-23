@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/atla-insights-openapi.yaml
+standards:
+  - id: openapi-3.1
+    conforms: true
+    evidence: openapi field is 3.1.0
+  - id: http-bearer-auth
+    conforms: true
+    evidence: securitySchemes.bearerAuth type http scheme bearer
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: error responses (401/404/500) do not declare application/problem+json
+  - id: pagination
+    conforms: true
+    evidence: listTraces exposes page/pageSize query parameters

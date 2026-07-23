@@ -1,0 +1,8 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/atla-insights-openapi.yaml
+skills:
+  - file: atla-fetch-traces.md
+    name: Fetch and inspect Atla Insights traces
+    api: openapi/atla-insights-openapi.yaml
+    operations: [listTraces, getTracesByIds, getTraceById]

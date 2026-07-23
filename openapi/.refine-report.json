@@ -1,0 +1,14 @@
+{
+  "provider": "atla",
+  "sources": [
+    "atla-sdk-api-openapi.yml"
+  ],
+  "outputs": [
+    "atla-sdk-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

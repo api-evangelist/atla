@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.atla-ai.com/ + provider SDK notices
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: paths are prefixed /api/sdk/v1/
+deprecation:
+  platform_sunset: '2026-02-16'
+  note: >-
+    The Atla Insights platform is scheduled to shut down on 16 February 2026
+    (per the @atla-ai/insights-sdk-js package notice). The separate Selene
+    evaluation API SDK (PyPI `atla`) and the atla-mcp-server were archived on
+    2025-07-21.
+status_page: null
+sla: null
+deprecated_operations: []
