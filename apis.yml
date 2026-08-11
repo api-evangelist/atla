@@ -59,6 +59,8 @@ apis:
   - type: OpenAPI
     url: openapi/atla-sdk-api-openapi.yml
 common:
+- type: Overlay
+  url: overlays/atla-insights-overlay.yaml
 - type: DeveloperPortal
   url: https://docs.atla-ai.com/
 - type: Documentation
