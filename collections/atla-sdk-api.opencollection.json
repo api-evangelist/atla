@@ -1,0 +1,115 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Atla Insights SDK API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SDK",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List traces with pagination and filtering",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.atla-ai.com/api/sdk/v1/traces",
+            "params": [
+              {
+                "name": "startTimestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endTimestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "metadataFilter",
+                "value": "",
+                "type": "query",
+                "description": "URL-encoded JSON array of metadata key-value pairs: [{\"key\":\"version\",\"value\":\"1\"}]"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Retrieve a paginated list of traces for the authenticated organization."
+        },
+        {
+          "info": {
+            "name": "Get multiple traces by IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.atla-ai.com/api/sdk/v1/traces/ids",
+            "params": [
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Retrieve specific traces by providing an array of trace IDs. Returns complete trace data including spans, summaries, and custom metrics for all found traces."
+        },
+        {
+          "info": {
+            "name": "Get a single trace by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.atla-ai.com/api/sdk/v1/traces/:traceId",
+            "params": [
+              {
+                "name": "include",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "traceId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Retrieve a specific trace by its unique identifier. Returns complete trace data including all spans, annotations, trace summary, and custom metric values."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

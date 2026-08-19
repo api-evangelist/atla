@@ -9,15 +9,18 @@ server:
   language: python
   license: MIT
   repo: https://github.com/atla-ai/atla-mcp-server
-  description: >-
-    Official MCP server providing a standardized interface for LLMs to interact
-    with the Atla API (Selene evaluation). Repository archived by the provider.
+  description: Official MCP server providing a standardized interface for LLMs to interact with the Atla
+    API (Selene evaluation). Repository archived by the provider.
 tools:
-  - name: evaluate
-    description: Run an Atla Selene evaluation over a model input/output against criteria.
-    source_operation: atla evaluation.create (Selene evaluation API)
-notes: >-
-  This MCP server targets the Atla Selene evaluation API (PyPI `atla`), which
-  is separate from the Atla Insights observability API captured in
-  openapi/atla-insights-openapi.yaml. Both the MCP server and the evaluation SDK
-  have been archived by the provider.
+- name: evaluate
+  description: Run an Atla Selene evaluation over a model input/output against criteria.
+  source_operation: atla evaluation.create (Selene evaluation API)
+notes: This MCP server targets the Atla Selene evaluation API (PyPI `atla`), which is separate from the
+  Atla Insights observability API captured in openapi/atla-insights-openapi.yaml. Both the MCP server
+  and the evaluation SDK have been archived by the provider.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 1
+  checked: '2026-08-12'
+  source: catalog MCP census

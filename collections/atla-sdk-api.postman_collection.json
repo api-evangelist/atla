@@ -1,0 +1,862 @@
+{
+  "item": [
+    {
+      "id": "ddb5085e-c28d-4f0e-8d8a-63899b0c825e",
+      "name": "SDK",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5792f3ea-2432-4fff-b875-b7dd71abc558",
+          "name": "List traces with pagination and filtering",
+          "request": {
+            "name": "List traces with pagination and filtering",
+            "description": {
+              "content": "Retrieve a paginated list of traces for the authenticated organization.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "sdk",
+                "v1",
+                "traces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimestamp",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimestamp",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metadataFilter",
+                  "value": "<string>",
+                  "description": "URL-encoded JSON array of metadata key-value pairs: [{\"key\":\"version\",\"value\":\"1\"}]"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "50"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "303361a0-5760-4801-b79d-7abcddc05314",
+              "name": "Successfully retrieved paginated list of traces",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimestamp",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endTimestamp",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "metadataFilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "50"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"traces\": [\n    {\n      \"id\": \"string\",\n      \"environment\": \"DEV\",\n      \"isSuccess\": true,\n      \"isCompleted\": false,\n      \"startedAt\": \"string\",\n      \"endedAt\": \"string\",\n      \"metadata\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"environment\": \"PROD\",\n      \"isSuccess\": true,\n      \"isCompleted\": true,\n      \"startedAt\": \"string\",\n      \"endedAt\": \"string\",\n      \"metadata\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      }\n    }\n  ],\n  \"total\": 6696.87074598949,\n  \"page\": 8794,\n  \"pageSize\": 7705\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "55bfc076-48f0-4b65-97c5-63b8b231e548",
+              "name": "Unauthorized - Invalid or missing API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimestamp",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endTimestamp",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "metadataFilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "50"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e742d72b-7407-401f-b0f6-bad336506b21",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimestamp",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endTimestamp",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "metadataFilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "50"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "20860173-21b9-4f74-80b3-6e9712ca2111",
+          "name": "Get multiple traces by IDs",
+          "request": {
+            "name": "Get multiple traces by IDs",
+            "description": {
+              "content": "Retrieve specific traces by providing an array of trace IDs. Returns complete trace data including spans, summaries, and custom metrics for all found traces.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "sdk",
+                "v1",
+                "traces",
+                "ids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "57334aac-1d29-43fe-ab87-88191539f174",
+              "name": "Successfully retrieved traces matching the provided IDs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    "ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"traces\": [\n    {\n      \"id\": \"string\",\n      \"environment\": \"DEV\",\n      \"isSuccess\": false,\n      \"isCompleted\": true,\n      \"stepCount\": 4564,\n      \"startedAt\": \"string\",\n      \"endedAt\": \"string\",\n      \"durationSeconds\": 9794.960744416145,\n      \"ingestedAt\": \"string\",\n      \"metadata\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"spans\": [\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"parentSpanId\": \"string\",\n          \"spanName\": \"string\",\n          \"startTimestamp\": \"string\",\n          \"endTimestamp\": \"string\",\n          \"isException\": false,\n          \"otelEvents\": [],\n          \"annotations\": [\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            },\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            }\n          ]\n        },\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"parentSpanId\": \"string\",\n          \"spanName\": \"string\",\n          \"startTimestamp\": \"string\",\n          \"endTimestamp\": \"string\",\n          \"isException\": true,\n          \"otelEvents\": [],\n          \"annotations\": [\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            },\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"customMetricValues\": [\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"customMetricId\": \"string\",\n          \"value\": \"string\",\n          \"customMetric\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"dataType\": \"LIKERT_1_TO_5\"\n          }\n        },\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"customMetricId\": \"string\",\n          \"value\": \"string\",\n          \"customMetric\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"dataType\": \"BOOLEAN\"\n          }\n        }\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"environment\": \"DEV\",\n      \"isSuccess\": false,\n      \"isCompleted\": false,\n      \"stepCount\": 260,\n      \"startedAt\": \"string\",\n      \"endedAt\": \"string\",\n      \"durationSeconds\": 7729.517442461585,\n      \"ingestedAt\": \"string\",\n      \"metadata\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"spans\": [\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"parentSpanId\": \"string\",\n          \"spanName\": \"string\",\n          \"startTimestamp\": \"string\",\n          \"endTimestamp\": \"string\",\n          \"isException\": true,\n          \"otelEvents\": [],\n          \"annotations\": [\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            },\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            }\n          ]\n        },\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"parentSpanId\": \"string\",\n          \"spanName\": \"string\",\n          \"startTimestamp\": \"string\",\n          \"endTimestamp\": \"string\",\n          \"isException\": false,\n          \"otelEvents\": [],\n          \"annotations\": [\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            },\n            {\n              \"spanId\": \"string\",\n              \"failureMode\": \"string\",\n              \"atlaCritique\": \"string\",\n              \"id\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"customMetricValues\": [\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"customMetricId\": \"string\",\n          \"value\": \"string\",\n          \"customMetric\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"dataType\": \"BOOLEAN\"\n          }\n        },\n        {\n          \"id\": \"string\",\n          \"traceId\": \"string\",\n          \"customMetricId\": \"string\",\n          \"value\": \"string\",\n          \"customMetric\": {\n            \"id\": \"string\",\n            \"name\": \"string\",\n            \"dataType\": \"BOOLEAN\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e0a2344e-8a3d-4d7c-91d8-1000d58be07b",
+              "name": "Unauthorized - Invalid or missing API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    "ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7ad7a8d6-33fe-4450-8d09-fb3f64bb0866",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    "ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c6fcccf2-6a74-4d24-b296-66c72668dc48",
+          "name": "Get a single trace by ID",
+          "request": {
+            "name": "Get a single trace by ID",
+            "description": {
+              "content": "Retrieve a specific trace by its unique identifier. Returns complete trace data including all spans, annotations, trace summary, and custom metric values.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "sdk",
+                "v1",
+                "traces",
+                ":traceId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "traceId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "006cf842-47ae-4809-a824-9e244ca06fb7",
+              "name": "Successfully retrieved trace with complete data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    ":traceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "traceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"trace\": {\n    \"id\": \"string\",\n    \"environment\": \"PROD\",\n    \"isSuccess\": true,\n    \"isCompleted\": false,\n    \"stepCount\": 8576,\n    \"startedAt\": \"string\",\n    \"endedAt\": \"string\",\n    \"durationSeconds\": 290.8708838565255,\n    \"ingestedAt\": \"string\",\n    \"metadata\": {\n      \"key_0\": \"string\"\n    },\n    \"spans\": [\n      {\n        \"id\": \"string\",\n        \"traceId\": \"string\",\n        \"parentSpanId\": \"string\",\n        \"spanName\": \"string\",\n        \"startTimestamp\": \"string\",\n        \"endTimestamp\": \"string\",\n        \"isException\": false,\n        \"otelEvents\": [],\n        \"annotations\": [\n          {\n            \"spanId\": \"string\",\n            \"failureMode\": \"string\",\n            \"atlaCritique\": \"string\",\n            \"id\": \"string\"\n          },\n          {\n            \"spanId\": \"string\",\n            \"failureMode\": \"string\",\n            \"atlaCritique\": \"string\",\n            \"id\": \"string\"\n          }\n        ]\n      },\n      {\n        \"id\": \"string\",\n        \"traceId\": \"string\",\n        \"parentSpanId\": \"string\",\n        \"spanName\": \"string\",\n        \"startTimestamp\": \"string\",\n        \"endTimestamp\": \"string\",\n        \"isException\": true,\n        \"otelEvents\": [],\n        \"annotations\": [\n          {\n            \"spanId\": \"string\",\n            \"failureMode\": \"string\",\n            \"atlaCritique\": \"string\",\n            \"id\": \"string\"\n          },\n          {\n            \"spanId\": \"string\",\n            \"failureMode\": \"string\",\n            \"atlaCritique\": \"string\",\n            \"id\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"customMetricValues\": [\n      {\n        \"id\": \"string\",\n        \"traceId\": \"string\",\n        \"customMetricId\": \"string\",\n        \"value\": \"string\",\n        \"customMetric\": {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"dataType\": \"LIKERT_1_TO_5\"\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"traceId\": \"string\",\n        \"customMetricId\": \"string\",\n        \"value\": \"string\",\n        \"customMetric\": {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"dataType\": \"BOOLEAN\"\n        }\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f4813bd0-892a-48ea-a556-654fdcda8e41",
+              "name": "Unauthorized - Invalid or missing API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    ":traceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "traceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0af4bd2e-3606-44c9-8c42-82a02cba65a2",
+              "name": "Trace not found or access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    ":traceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "traceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "90eb02a8-6d81-445d-aa23-ce2d20abc92c",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "sdk",
+                    "v1",
+                    "traces",
+                    ":traceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "traceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.atla-ai.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cc2fc84c-998c-41ae-9721-b791a49829e1",
+    "name": "Atla Insights SDK API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Development documentation",
+      "type": "text/plain"
+    }
+  }
+}
