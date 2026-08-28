@@ -11,6 +11,17 @@ description: >-
   to sunset on 16 February 2026, and the separate Selene evaluation API SDK and
   MCP server were archived in 2025.
 url: https://raw.githubusercontent.com/api-evangelist/atla/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
