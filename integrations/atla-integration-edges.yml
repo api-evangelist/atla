@@ -66,6 +66,41 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-ide-extension-marketplaces.py
   first_seen: '2026-10-20'
+- partner_name: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: hugging-face-hub
+  evidence: https://huggingface.co/AtlaAI
+  mirror_of: hugging-face/integrations/hugging-face-integration-edges.yml
+  apps:
+  - AtlaAI/counsel
+  - AtlaAI/demo-chat-responses
+  - AtlaAI/demo-chat-original-prompt
+  - AtlaAI/demo-chat-updated-prompt
+  - AtlaAI/Selene-1-Mini-Llama-3.1-8B
+  - AtlaAI/Selene-1-Llama-3.3-70B
+  - AtlaAI/Selene-1-Mini-Llama-3.1-8B-GPTQ-W4A16
+  - AtlaAI/Selene-1-Mini-Llama-3.1-8B-Q4_K_M-GGUF
+  - AtlaAI/Selene-1-Llama-3.3-70B-GPTQ-W8A8
+  - AtlaAI/Selene-1-Mini-Llama-3.1-8B-GPTQ-W8A8
+  - AtlaAI/Selene-1-Mini-Llama-3.1-8B-Q8_0-GGUF
+  - AtlaAI/judge-arena
+  - AtlaAI/selene
+  - AtlaAI/selene-1-mini-tech-report
+  - AtlaAI/LLMsOnTrial
+  - AtlaAI/StartupScan
+  - AtlaAI/counsel-tech-report
+  listing_count: 3
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Hugging Face Hub datasets
+  badges:
+  - Verified publisher (Hugging Face verified organisation)
 generated: '2026-10-18'
 method: searched
 source:
@@ -86,3 +121,4 @@ checked:
 - https://rubygems.org/api/v1
 - https://pypi.org/org/{org}/
 - https://pypi.org/pypi/{package}/json
+- hugging-face/integrations/hugging-face-integration-edges.yml
